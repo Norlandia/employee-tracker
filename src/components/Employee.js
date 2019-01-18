@@ -5,7 +5,7 @@ const Employee = (props) => {
     <tr className="employee">
       <td className="employee-name-job">
         <p className="employee-name">{props.employee.name}</p>
-        <p className="employee-job">{props.employee.job}</p>
+        <p className="employee-job">{props.employee.job ? props.employee.job : '&nbsp;'}</p>
       </td>
       <td className="employee-age">{props.employee.age}</td>
       <td className="employee-nickname">{props.employee.nick}</td>
