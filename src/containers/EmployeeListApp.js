@@ -8,11 +8,19 @@ class EmployeeListApp extends Component {
   state = {
     employees: initialEmployees,
     showModal: false,
+    dump: [],
   };
 
   handleDelete = (id) => {
+    const deletedEmployee = {
+      action: 'DELETE',
+      time: new Date().getTime(),
+      ...this.state.employees.splice(id, 1)[0],
+    };
+
     this.setState({
       employees: this.state.employees.filter((employee, i) => i !== id),
+      dump: [deletedEmployee, ...this.state.dump],
     });
   };
 
@@ -40,13 +48,22 @@ class EmployeeListApp extends Component {
       employee: e.target[4].checked,
     };
 
+    const newEmployeeDump = {
+      action: 'ADD',
+      time: new Date().getTime(),
+      ...newEmployee,
+    };
+
     this.setState({
-      employees: [...this.state.employees, newEmployee],
+      employees: [newEmployee, ...this.state.employees],
       showModal: false,
+      dump: [newEmployeeDump, ...this.state.dump],
     });
   };
 
   render() {
+    console.log(this.state.dump);
+
     return (
       <div className="container">
         <h1 className="page-title">Employee Tracker</h1>
@@ -62,7 +79,7 @@ class EmployeeListApp extends Component {
           employees={this.state.employees}
           delete={this.handleDelete}
         />
-        <DumpBox />
+        <DumpBox content={this.state.dump} />
       </div>
     );
   }
