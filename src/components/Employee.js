@@ -9,9 +9,10 @@ const Employee = (props) => {
       </td>
       <td className="employee-age">{props.employee.age}</td>
       <td className="employee-nickname">{props.employee.nick}</td>
-      <td>
+      <td className="check-employee">
         <input
           type="checkbox"
+          readOnly
           checked={props.employee.employee}
           className="employee-status"
         />

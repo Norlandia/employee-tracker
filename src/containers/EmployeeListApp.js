@@ -9,8 +9,8 @@ class EmployeeListApp extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Employee Tracker</h1>
+      <div className="container">
+        <h1 className="page-title">Employee Tracker</h1>
         <EmployeeList employees={this.state.employees}/>
       </div>
     );

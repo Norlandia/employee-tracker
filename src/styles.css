@@ -17,6 +17,56 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+table {
+  margin: auto;
+  min-width: 63%;
+}
+
+tr {
+  height: 20px;
+}
+
+td, th {
+  padding: 0 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-table {
+  justify-self: center;
+}
+
+.page-title {
+  font-family: 'Lobster', sans-serif;
+  align-self: center;
+  font-size: 60px;
+}
+
+.check-employee {
+  text-align: center;
+}
+
+.employee-name-job,
+.employee-nickname {
+  text-align: left;
+}
+
+.employee-name {
+  margin-bottom: 0;
+}
+
+.employee-job {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.employee-age {
+  text-align: right;
+}
+
 .delete {
   align-self: flex-end;
   background-color: tomato;
@@ -28,5 +78,5 @@ body {
   border: none;
   cursor: pointer;
   align-self: center;
-  box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 );
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

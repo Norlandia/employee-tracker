@@ -3,23 +3,25 @@ import Employee from './Employee';
 
 const EmployeeList = (props) => {
   return (
-    <div>
-      <table>
+    <table className="employee-table">
+      <thead>
         <tr>
-          <th>
-            <p>Name</p>
-            <p>(job title)</p>
+          <th className="employee-name-job">
+            <p className="employee-name">Name</p>
+            <p className="employee-job">(job title)</p>
           </th>
-          <th>Age</th>
-          <th>Nickname</th>
+          <th className="employee-age">Age</th>
+          <th className="employee-nickname">Nickname</th>
           <th>Employee</th>
           <th />
         </tr>
+      </thead>
+      <tbody>
         {props.employees.map((employee, index) => (
           <Employee key={index} employee={employee} />
         ))}
-      </table>
-    </div>
+      </tbody>
+    </table>
   );
 };
 
