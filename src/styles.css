@@ -1,0 +1,14 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #12358f,
+    #0056a5,
+    #0072ac,
+    #008ba8,
+    #14a2a2
+  );
+  color: white;
+}

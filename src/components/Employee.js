@@ -2,14 +2,21 @@ import React from 'react';
 
 const Employee = () => {
   return (
-      <li>
-        <span className="employee-name">Norlandia</span>
-        <span className="employee-age">12</span>
-        <span className="employee-nickname">Norlandia</span>
-        <input type="checkbox" className="employee-status"></input>
+    <tr className="employee">
+      <td className="employee-name-job">
+        <p className="employee-name">Nori</p>
+        <p className="employee-job">Chef</p>
+      </td>
+      <td className="employee-age">12</td>
+      <td className="employee-nickname">Norlandia</td>
+      <td>
+        <input type="checkbox" className="employee-status" />
+      </td>
+      <td>
         <button className="delete button">Delete</button>
-      </li>
+      </td>
+    </tr>
   );
-}
- 
+};
+
 export default Employee;
