@@ -25,7 +25,7 @@ const AddNewEmployee = (props) => {
         <button type="submit" className="ok-button">
           Ok
         </button>
-        <button className="cancel-button" onClick={() => props.close()}>Cancel</button>
+        <button className="delete delete-modal" onClick={(e) => props.close(e)}>Cancel</button>
       </form>
     </div>
   );

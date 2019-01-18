@@ -22,7 +22,7 @@ class EmployeeListApp extends Component {
   };
 
   hideModal = (e) => {
-    e.preventDefeault();
+    e.preventDefault();
     this.setState({
       showModal: false,
     });
