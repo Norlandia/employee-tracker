@@ -5,7 +5,6 @@ const EmployeeList = () => {
   return (
     <div>
       <Employee />
-      <Employee />
     </div>
   );
 }
