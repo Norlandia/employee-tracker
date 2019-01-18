@@ -28,12 +28,35 @@ class EmployeeListApp extends Component {
     });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newEmployee = {
+      name: e.target[0].value,
+      job: e.target[1].value,
+      age: e.target[2].value,
+      nick: e.target[3].value,
+      employee: e.target[4].checked,
+    };
+
+    this.setState({
+      employees: [...this.state.employees, newEmployee],
+      showModal: false,
+    });
+  };
+
   render() {
     return (
       <div className="container">
         <h1 className="page-title">Employee Tracker</h1>
-        <button className="add-button" onClick={() => this.showModal()}>Add</button>
-        <AddNewEmployee show={this.state.showModal} close={this.hideModal}/>
+        <button className="add-button" onClick={() => this.showModal()}>
+          Add
+        </button>
+        <AddNewEmployee
+          onSubmit={this.handleSubmit}
+          show={this.state.showModal}
+          close={this.hideModal}
+        />
         <EmployeeList
           employees={this.state.employees}
           delete={this.handleDelete}
