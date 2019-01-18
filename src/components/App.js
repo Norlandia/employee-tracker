@@ -1,9 +1,10 @@
 import React from 'react';
+import EmployeeListApp from '../containers/EmployeeListApp';
 
 const App = () => {
   return (
     <div>
-      <h1>Norlandia</h1>
+      <EmployeeListApp />
     </div>
   );
 }
