@@ -18,7 +18,7 @@ const Employee = (props) => {
         />
       </td>
       <td>
-        <button className="delete button">Delete</button>
+        <button className="delete button" onClick={() => props.delete(props.id)}>Delete</button>
       </td>
     </tr>
   );

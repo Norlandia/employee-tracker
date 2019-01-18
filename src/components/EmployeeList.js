@@ -18,7 +18,7 @@ const EmployeeList = (props) => {
       </thead>
       <tbody>
         {props.employees.map((employee, index) => (
-          <Employee key={index} employee={employee} />
+          <Employee key={index} id={index} employee={employee} delete={props.delete}/>
         ))}
       </tbody>
     </table>
