@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EmployeeList from '../components/EmployeeList';
 import initialEmployees from '../initialEmployees';
 import AddNewEmployee from '../components/AddNewEmployee';
+import DumpBox from '../components/DumpBox';
 
 class EmployeeListApp extends Component {
   state = {
@@ -61,6 +62,7 @@ class EmployeeListApp extends Component {
           employees={this.state.employees}
           delete={this.handleDelete}
         />
+        <DumpBox />
       </div>
     );
   }
