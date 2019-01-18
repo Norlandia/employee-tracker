@@ -7,19 +7,19 @@ const AddNewEmployee = (props) => {
     <div className={modalClass}>
       <form className="modal-main">
         <label> Name
-          <input type="text"/>
+          <input type="text" className="text-input"/>
         </label>
         <label> Job title
-          <input type="text"/>
+          <input type="text" className="text-input"/>
         </label>
         <label> Age
-          <input type="text"/>
+          <input type="text" className="text-input"/>
         </label>
         <label> Nickname
-          <input type="text"/>
+          <input type="text" className="text-input"/>
         </label>
         <label> Employee
-          <input type="checkbox"/>
+          <input type="checkbox" className="input-checkbox"/>
         </label>
         
         <button type="submit" className="ok-button">
