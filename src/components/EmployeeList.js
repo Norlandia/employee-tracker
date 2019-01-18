@@ -1,7 +1,7 @@
 import React from 'react';
 import Employee from './Employee';
 
-const EmployeeList = () => {
+const EmployeeList = (props) => {
   return (
     <div>
       <table>
@@ -15,7 +15,9 @@ const EmployeeList = () => {
           <th>Employee</th>
           <th />
         </tr>
-        <Employee />
+        {props.employees.map((employee, index) => (
+          <Employee key={index} employee={employee} />
+        ))}
       </table>
     </div>
   );

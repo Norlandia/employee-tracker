@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import EmployeeList from '../components/EmployeeList';
+import initialEmployees from '../initialEmployees';
 
 class EmployeeListApp extends Component {
-  state = {};
+  state = {
+    employees: initialEmployees,
+  };
+
   render() {
     return (
       <div>
         <h1>Employee Tracker</h1>
-        <EmployeeList />
+        <EmployeeList employees={this.state.employees}/>
       </div>
     );
   }
