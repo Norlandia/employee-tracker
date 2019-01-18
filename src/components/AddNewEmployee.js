@@ -5,7 +5,7 @@ const AddNewEmployee = (props) => {
 
   return (
     <div className={modalClass}>
-      <form className="modal-main" onSubmit={(e) => props.onSubmit(e)}>
+      <form id="add-employee" className="modal-main" onSubmit={(e) => props.onSubmit(e)}>
         <label>
           Name
           <input type="text" className="text-input" />

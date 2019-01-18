@@ -35,6 +35,8 @@ class EmployeeListApp extends Component {
     this.setState({
       showModal: false,
     });
+
+    this.clearForm();
   };
 
   handleSubmit = (e) => {
@@ -59,7 +61,13 @@ class EmployeeListApp extends Component {
       showModal: false,
       dump: [newEmployeeDump, ...this.state.dump],
     });
+
+    this.clearForm();
   };
+
+  clearForm = () => { 
+    document.getElementById("add-employee").reset();
+  }
 
   render() {
     console.log(this.state.dump);
