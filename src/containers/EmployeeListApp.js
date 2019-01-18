@@ -17,6 +17,7 @@ class EmployeeListApp extends Component {
     return (
       <div className="container">
         <h1 className="page-title">Employee Tracker</h1>
+        <button className="add-button">Add</button>
         <EmployeeList
           employees={this.state.employees}
           delete={this.handleDelete}

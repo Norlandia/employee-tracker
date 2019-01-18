@@ -20,13 +20,16 @@ body {
 table {
   margin: auto;
   min-width: 63%;
+  border-collapse: collapse;
 }
 
 tr {
   height: 20px;
+  border-bottom: 1px solid #12358f;
 }
 
-td, th {
+td,
+th {
   padding: 0 15px;
 }
 
@@ -65,6 +68,21 @@ td, th {
 
 .employee-age {
   text-align: right;
+}
+
+.add-button {
+  height: 47px;
+  width: 125px;
+  border: none;
+  margin: 25px 5px 35px 0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: #33cfc0;
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+  align-self: center;
+  box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 );
 }
 
 .delete {
