@@ -9,7 +9,7 @@ const DumpBox = (props) => {
       <textarea
         id="textbox"
         className="textbox"
-        value={JSON.stringify(props.content)}
+        value={JSON.stringify(props.content).replace('},', '},\n')}
         readOnly
       />
     </div>
