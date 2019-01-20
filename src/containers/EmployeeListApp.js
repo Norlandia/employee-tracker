@@ -55,19 +55,23 @@ class EmployeeListApp extends Component {
       time: new Date().getTime(),
       ...newEmployee,
     };
-
-    this.setState({
-      employees: [newEmployee, ...this.state.employees],
-      showModal: false,
-      dump: [newEmployeeDump, ...this.state.dump],
-    });
+    
+    if (newEmployee.name !== '') {
+      this.setState({
+        employees: [newEmployee, ...this.state.employees],
+        showModal: false,
+        dump: [newEmployeeDump, ...this.state.dump],
+      });
+    } else {
+      alert('Name field is required!');
+    }
 
     this.clearForm();
   };
 
-  clearForm = () => { 
-    document.getElementById("add-employee").reset();
-  }
+  clearForm = () => {
+    document.getElementById('add-employee').reset();
+  };
 
   render() {
     console.log(this.state.dump);
