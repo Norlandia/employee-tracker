@@ -85,14 +85,14 @@ th {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.graph-button{
+.graph-button {
   height: 47px;
   width: 125px;
   border: none;
   margin: 25px 5px 35px 0;
   padding: 0;
   border-radius: 10px;
-  background-color: #0984C3;
+  background-color: #0984c3;
   cursor: pointer;
   font-size: 22px;
   color: white;
@@ -213,4 +213,12 @@ label {
   width: auto;
   height: auto;
   align-self: center;
+}
+
+.graph-visible {
+  display: initial;
+}
+
+.graph-hide {
+  display: none;
 }

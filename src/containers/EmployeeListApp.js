@@ -10,6 +10,7 @@ class EmployeeListApp extends Component {
     employees: initialEmployees,
     showModal: false,
     dump: [],
+    showGraph: false,
   };
 
   handleDelete = (id) => {
@@ -90,6 +91,12 @@ class EmployeeListApp extends Component {
     });
   };
 
+  handleGraph = () => {
+    this.setState({
+      showGraph: !this.state.showGraph,
+    })
+  }
+
   render() {
     return (
       <div className="container">
@@ -97,8 +104,8 @@ class EmployeeListApp extends Component {
         <button className="add-button" onClick={() => this.showModal()}>
           Add
         </button>
-        <AgeGraph ages={this.getAgeDistribution()} />
-        <button className="graph-button">Graph</button>
+        <AgeGraph ages={this.getAgeDistribution()} show={this.state.showGraph}/>
+        <button className="graph-button" onClick={() => this.handleGraph()}>Graph</button>
         <AddNewEmployee
           onSubmit={this.handleSubmit}
           show={this.state.showModal}

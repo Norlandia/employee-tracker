@@ -1,9 +1,14 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 
-const AgeGraph = ({ ages }) => {
+const AgeGraph = ({ ages, show }) => {
+  const isVisible = () => {
+    return show
+      ? 'graph-container graph-visible' : 'graph-container graph-hide';
+  };
+
   return (
-    <div className="graph-container">
+    <div className={isVisible()}>
       <BarChart
         width={600}
         height={300}
@@ -12,7 +17,7 @@ const AgeGraph = ({ ages }) => {
       >
         <XAxis dataKey="age" />
         <YAxis ticks={[...ages.map((e) => e.count)]} />
-        <Tooltip cursor={{fill:"#B5DEF3"}}/>
+        <Tooltip cursor={{ fill: '#B5DEF3' }} />
         <Bar dataKey="count" fill="#0984C3" />
       </BarChart>
     </div>
@@ -20,4 +25,3 @@ const AgeGraph = ({ ages }) => {
 };
 
 export default AgeGraph;
-
