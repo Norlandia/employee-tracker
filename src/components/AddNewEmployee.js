@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AddNewEmployee = (props) => {
-  const modalClass = props.show ? 'modal show' : 'modal hide';
+const AddNewEmployee = ({ show, onSubmit, close }) => {
+  const modalClass = show ? 'modal show' : 'modal hide';
 
   return (
     <div className={modalClass}>
-      <form id="add-employee" className="modal-main" onSubmit={(e) => props.onSubmit(e)}>
+      <form
+        id="add-employee"
+        className="modal-main"
+        onSubmit={(e) => onSubmit(e)}
+      >
         <label>
           Name*
           <input type="text" className="text-input" />
@@ -30,12 +35,18 @@ const AddNewEmployee = (props) => {
         <button type="submit" className="ok-button">
           Ok
         </button>
-        <button className="delete delete-modal" onClick={(e) => props.close(e)}>
+        <button className="delete delete-modal" onClick={(e) => close(e)}>
           Cancel
         </button>
       </form>
     </div>
   );
+};
+
+AddNewEmployee.propTypes = {
+  show: PropTypes.bool,
+  onSubmit: PropTypes.func,
+  close: PropTypes.func,
 };
 
 export default AddNewEmployee;

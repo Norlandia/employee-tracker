@@ -55,7 +55,7 @@ class EmployeeListApp extends Component {
       time: new Date().getTime(),
       ...newEmployee,
     };
-    
+
     if (newEmployee.name !== '') {
       this.setState({
         employees: [newEmployee, ...this.state.employees],
@@ -74,7 +74,6 @@ class EmployeeListApp extends Component {
   };
 
   render() {
-    console.log(this.state.dump);
 
     return (
       <div className="container">
@@ -89,7 +88,7 @@ class EmployeeListApp extends Component {
         />
         <EmployeeList
           employees={this.state.employees}
-          delete={this.handleDelete}
+          deleteEmployee={this.handleDelete}
         />
         <DumpBox content={this.state.dump} />
       </div>

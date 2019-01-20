@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const DumpBox = (props) => {
+const DumpBox = ({ content }) => {
   return (
     <div className="textbox-container">
       <label htmlFor="textbox" className="textbox-title">
@@ -9,11 +10,15 @@ const DumpBox = (props) => {
       <textarea
         id="textbox"
         className="textbox"
-        value={JSON.stringify(props.content).replace('},', '},\n')}
+        value={JSON.stringify(content).replace('},', '},\n')}
         readOnly
       />
     </div>
   );
+};
+
+DumpBox.propTypes = {
+  content: PropTypes.array,
 };
 
 export default DumpBox;

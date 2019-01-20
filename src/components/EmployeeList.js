@@ -1,7 +1,8 @@
 import React from 'react';
 import Employee from './Employee';
+import PropTypes from 'prop-types';
 
-const EmployeeList = (props) => {
+const EmployeeList = ({ employees, deleteEmployee }) => {
   return (
     <table className="employee-table">
       <thead>
@@ -17,17 +18,22 @@ const EmployeeList = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.employees.map((employee, index) => (
+        {employees.map((employee, index) => (
           <Employee
             key={index}
             id={index}
             employee={employee}
-            delete={props.delete}
+            deleteEmployee={deleteEmployee}
           />
         ))}
       </tbody>
     </table>
   );
+};
+
+EmployeeList.propTypes = {
+  employees: PropTypes.array,
+  deleteEmployee: PropTypes.func,
 };
 
 export default EmployeeList;
