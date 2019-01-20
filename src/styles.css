@@ -107,7 +107,6 @@ th {
   width: 80px;
   height: 47px;
   border: none;
-  margin: 25px 5px 35px 0;
   padding: 0;
   border-radius: 10px;
   background-color: #33cfc0;
@@ -116,30 +115,28 @@ th {
   color: white;
   align-self: center;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  bottom: 25px;
-  left: 200px;
-}
-
-.delete-modal {
-  position: relative;
-  left: 216px;
-  bottom: 25px;
+  margin-right: 20px;
 }
 
 .delete {
   outline: none;
-  align-self: flex-end;
   background-color: tomato;
   color: white;
   width: 80px;
   height: 47px;
+  padding: 0;
   font-size: 18px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   align-self: center;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
 }
 
 .modal {
@@ -157,7 +154,7 @@ th {
   color: black;
   background: white;
   width: 400px;
-  height: 300px;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

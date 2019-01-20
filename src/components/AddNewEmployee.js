@@ -31,13 +31,14 @@ const AddNewEmployee = ({ show, onSubmit, close }) => {
           Employee
           <input type="checkbox" className="input-checkbox" />
         </label>
-
-        <button type="submit" className="ok-button">
-          Ok
-        </button>
-        <button className="delete delete-modal" onClick={(e) => close(e)}>
-          Cancel
-        </button>
+        <div className="modal-buttons-container">
+          <button type="submit" className="ok-button">
+            Ok
+          </button>
+          <button className="delete delete-modal" onClick={(e) => close(e)}>
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );
