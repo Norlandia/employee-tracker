@@ -208,17 +208,34 @@ label {
 }
 
 .graph-container {
+  display: block;
   box-sizing: border-box;
-  padding: 10px;
   width: auto;
-  height: auto;
+  height: 300px;
   align-self: center;
+  overflow: hidden;
 }
 
 .graph-visible {
-  display: block;
+  height: 300px;;
+  -webkit-transition: height 0.5s ease;
+  -moz-transition: height 0.5s ease;
+  -ms-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 .graph-hide {
-  display: none;
+  height: 0;
+  padding: 0;
+  -webkit-transition: height 0.5s ease;
+  -moz-transition: height 0.5s ease;
+  -ms-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+}
+
+.recharts-surface {
+  overflow: overlay;
+  padding: 10px;
 }

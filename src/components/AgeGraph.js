@@ -16,7 +16,7 @@ const AgeGraph = ({ ages, show }) => {
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <XAxis dataKey="age" />
-          <YAxis ticks={[...ages.map((e) => e.count)]} />
+          <YAxis width={2} ticks={[...ages.map((e) => e.count)]} />
           <Tooltip cursor={{ fill: '#B5DEF3' }} />
           <Bar dataKey="count" fill="#0984C3" />
         </BarChart>
