@@ -216,7 +216,7 @@ label {
 }
 
 .graph-visible {
-  display: initial;
+  display: block;
 }
 
 .graph-hide {
