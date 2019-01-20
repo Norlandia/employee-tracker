@@ -3,6 +3,7 @@ import EmployeeList from '../components/EmployeeList';
 import initialEmployees from '../initialEmployees';
 import AddNewEmployee from '../components/AddNewEmployee';
 import DumpBox from '../components/DumpBox';
+import AgeGraph from '../components/AgeGraph';
 
 class EmployeeListApp extends Component {
   state = {
@@ -73,14 +74,31 @@ class EmployeeListApp extends Component {
     document.getElementById('add-employee').reset();
   };
 
-  render() {
+  getAgeDistribution = () => {
+    const ageFrequency = {};
 
+    const ages = this.state.employees
+      .map((employee) => employee.age)
+      .filter((age) => !isNaN(age));
+
+    ages.forEach((age) =>
+      ageFrequency[age] ? ++ageFrequency[age] : (ageFrequency[age] = 1)
+    );
+
+    return Object.entries(ageFrequency).map((e) => {
+      return { age: e[0], count: e[1] };
+    });
+  };
+
+  render() {
     return (
       <div className="container">
         <h1 className="page-title">Employee Tracker</h1>
         <button className="add-button" onClick={() => this.showModal()}>
           Add
         </button>
+        <AgeGraph ages={this.getAgeDistribution()} />
+        <button className="graph">Graph</button>
         <AddNewEmployee
           onSubmit={this.handleSubmit}
           show={this.state.showModal}

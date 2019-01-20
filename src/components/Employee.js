@@ -29,7 +29,7 @@ const Employee = ({ id, employee, deleteEmployee }) => {
 
 Employee.propTypes = {
   employee: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     job: PropTypes.string,
     age: PropTypes.number,
     nick: PropTypes.string,
