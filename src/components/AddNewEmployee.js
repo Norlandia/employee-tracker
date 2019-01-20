@@ -29,7 +29,9 @@ const AddNewEmployee = ({ show, onSubmit, close }) => {
         </label>
         <label>
           Employee
-          <input type="checkbox" className="input-checkbox" />
+          <span className="checkbox-container">
+            <input type="checkbox" className="input-checkbox" />
+          </span>
         </label>
         <div className="modal-buttons-container">
           <button type="submit" className="ok-button">
