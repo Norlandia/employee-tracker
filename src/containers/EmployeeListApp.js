@@ -98,7 +98,7 @@ class EmployeeListApp extends Component {
           Add
         </button>
         <AgeGraph ages={this.getAgeDistribution()} />
-        <button className="graph">Graph</button>
+        <button className="graph-button">Graph</button>
         <AddNewEmployee
           onSubmit={this.handleSubmit}
           show={this.state.showModal}

@@ -85,7 +85,7 @@ th {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.graph {
+.graph-button{
   height: 47px;
   width: 125px;
   border: none;
@@ -205,4 +205,12 @@ label {
   width: 66%;
   height: 300px;
   font-size: 18px;
+}
+
+.graph-container {
+  box-sizing: border-box;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  align-self: center;
 }
