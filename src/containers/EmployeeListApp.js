@@ -19,13 +19,11 @@ class EmployeeListApp extends Component {
       time: new Date().getTime(),
       ...this.state.employees.filter((employee, i) => i === id),
     };
-    console.log('n', deletedEmployee);
 
     this.setState({
       employees: this.state.employees.filter((employee, i) => i !== id),
       dump: [deletedEmployee, ...this.state.dump],
     });
-    console.log('state2', this.state.employees);
   };
 
   showModal = () => {
@@ -100,7 +98,6 @@ class EmployeeListApp extends Component {
   };
 
   render() {
-    console.log('state1', this.state.employees);
     return (
       <div className="container">
         <h1 className="page-title">Employee Tracker</h1>
